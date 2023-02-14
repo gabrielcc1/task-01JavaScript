@@ -1,0 +1,54 @@
+.btn{
+    margin-left: 5px;
+}
+#IM {
+    padding: 1%;
+}
+a{
+    font-size: xx-large;
+    text-decoration: none;
+}
+.form{
+    margin-top: 3%;
+}
+
+section {
+    margin-bottom: 3%;
+}
+.card-img, .card-img-bottom, .card-img-top {
+    width: 91%;
+    height: 100%;
+    align-self: center;
+    margin-top: 4%;
+    box-shadow: -7px -6px 5px 2px;
+}
+#price{
+    margin: 0px;
+    padding-top: 5%;
+}
+#btn{
+    margin-left: 29%;
+    box-shadow: -6px -3px 6px 2px black;
+}
+
+footer.d-flex.flex-wrap.bg-secondary.p-3 {
+    column-gap: 6%;
+}
+#fo{
+        font-size: 30px;
+        margin: 0;
+        padding-top: 1%;
+    }
+
+    table, td {
+        border: solid 1px;
+    }
+
+    element.style {
+        margin-top: 4%;
+    }
+    .img-fluid {
+        max-width: 142%;
+        height: 100%;
+        padding: 7%;
+    }
