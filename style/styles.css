@@ -1,3 +1,7 @@
+
+.nav-item{
+    margin:2px;
+}
 .btn{
     margin-left: 5px;
 }
@@ -12,7 +16,7 @@ a{
     margin-top: 3%;
 }
 
-section {
+#section {
     margin-bottom: 3%;
 }
 .card-img, .card-img-bottom, .card-img-top {
@@ -22,11 +26,23 @@ section {
     margin-top: 4%;
     box-shadow: -7px -6px 5px 2px;
 }
-#price{
+.price{
     margin: 0px;
     padding-top: 5%;
 }
 #btn{
+    margin-left: 29%;
+    box-shadow: -6px -3px 6px 2px black;
+}
+#btn1{
+    margin-left: 29%;
+    box-shadow: -6px -3px 6px 2px black;
+}
+#btn2{
+    margin-left: 29%;
+    box-shadow: -6px -3px 6px 2px black;
+}
+#btn3{
     margin-left: 29%;
     box-shadow: -6px -3px 6px 2px black;
 }
@@ -51,4 +67,10 @@ footer.d-flex.flex-wrap.bg-secondary.p-3 {
         max-width: 142%;
         height: 100%;
         padding: 7%;
+    }
+    footer {
+        margin-bottom: auto;
+    }
+    #main {
+        height: 330px;
     }

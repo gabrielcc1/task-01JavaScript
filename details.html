@@ -16,15 +16,17 @@
     <header class="d-flex flex-column">
         <div class="d-flex flex-wrap bg-secondary p-3">
             <img id="IM" src="./assets/Logo_Amazing_Events.png" alt="logo" width="60" height="80" class="col-2 me-auto">
-            <button type="button" class="btn btn-primary align-self-center">Home</button>
-            <button type="button" class="btn btn-primary align-self-center">Upcoming events</button>
-            <button type="button" class="btn btn-primary align-self-center">Past events</button>
-            <button type="button" class="btn btn-primary align-self-center">Contact</button>
-            <button type="button" class="btn btn-primary align-self-center">Stats</button>
+            <ul class="nav nav-pills">
+              <li class="nav-item align-self-center"><a href="./index.html" class="nav-link active">Home</a></li>
+              <li class="nav-item align-self-center"><a href="./upcomig_events.html" class="nav-link active">Upcoming events</a></li>
+              <li class="nav-item align-self-center"><a href="./past_events.html" class="nav-link active">Past events</a></li>
+              <li class="nav-item align-self-center"><a href="./contact.html" class="nav-link active">Contact</a></li>
+              <li class="nav-item align-self-center"><a href="./stats.html" class="nav-link active" >Stats</a></li>
+            </ul>
         </div>
     </header>
     <main>
-        <section class="d-flex d-flex justify-content-center">
+        <section id="section" class="d-flex d-flex justify-content-center">
             <div class="card mb-3" style="max-width: 540px; margin-top: 4%;">
                 <div class="row g-0">
                   <div class="col-md-4">
@@ -44,9 +46,9 @@
         </section>
     </main>
     <footer class=" d-flex flex-wrap bg-secondary p-3">
-        <a href="#"><img src="./assets/instagram.png"></a>
-        <a href="#"><img src="./assets/facebook.png"></a>
-        <a href="#" class="me-auto"><img src="./assets/whatsapp.png"></a>
+        <a href="#"><img src="./assets/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="./assets/facebook.png" alt="facebook"></a>
+        <a href="#" class="me-auto"><img src="./assets/whatsapp.png" alt="whatsapp"></a>
         <p id="fo"> Cohort </p>
     </footer>
 

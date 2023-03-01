@@ -16,100 +16,104 @@
     <header class="d-flex flex-column">
         <div class="d-flex flex-wrap bg-secondary p-3">
             <img id="IM" src="./assets/Logo_Amazing_Events.png" alt="logo" width="60" height="80" class="col-2 me-auto">
-            <button type="button" class="btn btn-primary align-self-center">Home</button>
-            <button type="button" class="btn btn-primary align-self-center">Upcoming events</button>
-            <button type="button" class="btn btn-primary align-self-center">Past events</button>
-            <button type="button" class="btn btn-primary align-self-center">Contact</button>
-            <button type="button" class="btn btn-primary align-self-center">Stats</button>
+            <ul class="nav nav-pills">
+                <li class="nav-item align-self-center"><a href="./index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item align-self-center"><a href="./upcomig_events.html" class="nav-link active">Upcoming
+                        events</a></li>
+                <li class="nav-item align-self-center"><a href="#" class="nav-link active">Past events</a></li>
+                <li class="nav-item align-self-center"><a href="./contact.html" class="nav-link active">Contact</a></li>
+                <li class="nav-item align-self-center"><a href="./stats.html" class="nav-link active">Stats</a></li>
+            </ul>
         </div>
         <nav class="navbar sticky-top bg-dark p-3">
             <div class="container-fluid">
-                <a href="./upcomig_events.html"><img src="./assets/izqu.png" width="60" height="80"></a>
+                <a href="./upcomig_events.html"><img src="./assets/izqu.png" width="60" height="80" alt="next"></a>
                 <a class="text-white" href="#">Past events</a>
-                <a href="./contact.html"><img src="./assets/proximo.png" width="60" height="80"></a>
+                <a href="./contact.html"><img src="./assets/proximo.png" width="60" height="80" alt="next"></a>
             </div>
         </nav>
     </header>
     <main>
-            <section> 
-                <div class="form d-flex flex-wrap d-flex justify-content-evenly">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">Category</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">Category</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">Category</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">Category</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">Category</label>
-                    </div>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+        <div id="section">
+            <div class="form d-flex flex-wrap d-flex justify-content-evenly">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Category</label>
                 </div>
-            </section>
-            <section class="d-flex flex-wrap justify-content-evenly">
-                <div class="card" style="width: 18rem;">
-                    <img src="./assets/Food_Fair.jpg" class="card-img-top" alt="food">
-                    <div class="card-body">
-                        <h5 class="card-title">title</h5>
-                        <p class="card-text">description</p>
-                        <div class="d-flex">
-                            <p id="price"> price $00000</p>
-                        <a href="#" class="btn btn-primary" id="btn">Ver mas</a>
-                        </div>
-                    </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Category</label>
                 </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="./assets/Marathon.jpg" class="card-img-top" alt="Marathon">
-                    <div class="card-body">
-                        <h5 class="card-title">title</h5>
-                        <p class="card-text">description</p>
-                        <div class="d-flex">
-                            <p id="price"> price $00000</p>
-                        <a href="#" class="btn btn-primary" id="btn">Ver mas</a>
-                        </div>
-                    </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox2">Category</label>
                 </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="./assets/Museum_Tour.jpg" class="card-img-top" alt="Museum">
-                    <div class="card-body">
-                        <h5 class="card-title">title</h5>
-                        <p class="card-text">description</p>
-                        <div class="d-flex">
-                            <p id="price"> price $00000</p>
-                        <a href="#" class="btn btn-primary" id="btn">Ver mas</a>
-                        </div>
-                    </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                    <label class="form-check-label" for="inlineCheckbox2">Category</label>
                 </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="./assets/Music_Concert.jpg" class="card-img-top" alt="Concert">
-                    <div class="card-body">
-                        <h5 class="card-title">title</h5>
-                        <p class="card-text">description</p>
-                        <div class="d-flex">
-                            <p id="price"> price $00000</p>
-                        <a href="#" class="btn btn-primary" id="btn">Ver mas</a>
-                        </div>
-                    </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                    <label class="form-check-label" for="inlineCheckbox2">Category</label>
                 </div>
-            </section>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+             </div>
+       </div>
+
+       <section class="d-flex flex-wrap justify-content-evenly">
+        <div  class="card" style="width: 18rem;">
+            <img src="./assets/Food_Fair.jpg" class="card-img-top" alt="food">
+            <div class="card-body">
+                <h5  id="titulocard" class="card-title">title</h5>
+                <p class="card-text">description</p>
+                <div class="d-flex">
+                    <p class="price"> price $00000</p>
+                <a href="#" class="btn btn-primary" id="btn">Ver mas</a>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/Marathon.jpg" class="card-img-top" alt= "Marathon">
+            <div class="card-body">
+                <h5 class="card-title">title</h5>
+                <p class="card-text">description</p>
+                <div class="d-flex">
+                    <p class="price"> price $00000</p>
+                <a href="#" class="btn btn-primary" id="btn1">Ver mas</a>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/Museum_Tour.jpg" class="card-img-top" alt="Museum">
+            <div class="card-body">
+                <h5 class="card-title">title</h5>
+                <p class="card-text">description</p>
+                <div class="d-flex">
+                    <p class="price"> price $00000</p>
+                <a href="#" class="btn btn-primary" id="btn2">Ver mas</a>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/Music_Concert.jpg" class="card-img-top" alt="Concert">
+            <div class="card-body">
+                <h5 class="card-title">title</h5>
+                <p class="card-text">description</p>
+                <div class="d-flex">
+                    <p class="price"> price $00000</p>
+                <a href="#" class="btn btn-primary" id="btn3">Ver mas</a>
+                </div>
+            </div>
+        </div>
+    </section>
     </main>
     <footer class=" d-flex flex-wrap bg-secondary p-3">
-        <a href="#"><img src="./assets/instagram.png"></a>
-        <a href="#"><img src="./assets/facebook.png"></a>
-        <a href="#" class="me-auto"><img src="./assets/whatsapp.png"></a>
+        <a href="#"><img src="./assets/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="./assets/facebook.png" alt="facebook"></a>
+        <a href="#" class="me-auto"><img src="./assets/whatsapp.png" alt="whatsapp"></a>
         <p id="fo"> Cohort </p>
     </footer>
 
@@ -117,5 +121,5 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 </body>
-
+<script src="./scripts/script_2.js"></script>
 </html>

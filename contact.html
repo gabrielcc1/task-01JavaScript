@@ -16,49 +16,57 @@
     <header class="d-flex flex-column">
         <div class="d-flex flex-wrap bg-secondary p-3">
             <img id="IM" src="./assets/Logo_Amazing_Events.png" alt="logo" width="60" height="80" class="col-2 me-auto">
-            <button type="button" class="btn btn-primary align-self-center">Home</button>
-            <button type="button" class="btn btn-primary align-self-center">Upcoming events</button>
-            <button type="button" class="btn btn-primary align-self-center">Past events</button>
-            <button type="button" class="btn btn-primary align-self-center">Contact</button>
-            <button type="button" class="btn btn-primary align-self-center">Stats</button>
+            <ul class="nav nav-pills">
+                <li class="nav-item align-self-center"><a href="./index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item align-self-center"><a href="./upcomig_events.html" class="nav-link active">Upcoming
+                        events</a></li>
+                <li class="nav-item align-self-center"><a href="./past_events.html" class="nav-link active">Past
+                        events</a></li>
+                <li class="nav-item align-self-center"><a href="#" class="nav-link active">Contact</a></li>
+                <li class="nav-item align-self-center"><a href="./stats.html" class="nav-link active">Stats</a></li>
+            </ul>
         </div>
         <nav class="navbar sticky-top bg-dark p-3">
             <div class="container-fluid">
-                <a href="./past_events.html"><img src="./assets/izqu.png" width="60" height="80"></a>
+                <a href="./past_events.html"><img src="./assets/izqu.png" width="60" height="80" alt="next"></a>
                 <a class="text-white" href="#"> contact</a>
-                <a href="./stats.html"><img src="./assets/proximo.png" width="60" height="80"></a>
+                <a href="./stats.html"><img src="./assets/proximo.png" width="60" height="80" alt="next"></a>
             </div>
         </nav>
     </header>
-    <main>
-        <section class="d-flex  d-flex justify-content-center">
-
-            <div style="width: 18rem;">
-                <form action="" method="">
-                    <fieldset>
-                        <div>
-                            <label for="FormInput1">Name</label><br>
-                            <input type="text" id="FormInput1" placeholder="name" name="FormInput1" style="width: 100%;">
-                        </div>
-                        <div>
-                            <label for="FormInput2">Email</label><br>
-                            <input type="email" id="FormInput2" placeholder="name@example.com" name="FormInput" style="width: 100%;">
-                        </div>
-                        <div>
-                            <label for="FormTextarea1">Mensage</label><br>
-                            <textarea id="FormTextarea1" rows="3" name="FormTextarea1" style="width: 100%;"> </textarea>
-                        </div>
-                    </fieldset>
-                    <input type="submit" value="send" id="bottom">
-                </form>
+    <main id="main">
+        
+            <div id="section" class="d-flex  d-flex justify-content-center">
+                <div style="width: 18rem;">
+                    <form>
+                        <fieldset>
+                            <div>
+                                <label for="FormInput1">Name</label><br>
+                                <input type="text" id="FormInput1" placeholder="name" name="FormInput1"
+                                    style="width: 100%;">
+                            </div>
+                            <div>
+                                <label for="FormInput2">Email</label><br>
+                                <input type="email" id="FormInput2" placeholder="name@example.com" name="FormInput"
+                                    style="width: 100%;">
+                            </div>
+                            <div>
+                                <label for="FormTextarea1">Mensage</label><br>
+                                <textarea id="FormTextarea1" rows="3" name="FormTextarea1"
+                                    style="width: 100%;"> </textarea>
+                            </div>
+                        </fieldset>
+                        <input type="submit" value="send" id="bottom">
+                    </form>
+                </div>
             </div>
-
-        </section>
+       
     </main>
+
     <footer class=" d-flex flex-wrap bg-secondary p-3">
-        <a href="#"><img src="./assets/instagram.png"></a>
-        <a href="#"><img src="./assets/facebook.png"></a>
-        <a href="#" class="me-auto"><img src="./assets/whatsapp.png"></a>
+        <a href="#"><img src="./assets/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="./assets/facebook.png" alt="facebook"></a>
+        <a href="#" class="me-auto"><img src="./assets/whatsapp.png" alt="whatsapp"></a>
         <p id="fo"> Cohort </p>
     </footer>
 
