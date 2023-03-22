@@ -214,3 +214,4 @@ for (var i = 0; i < eventUpcoming.length; i++) {
   imagen[i].src = eventUpcoming[i].image
 }
 
+

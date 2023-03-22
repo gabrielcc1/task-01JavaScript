@@ -172,29 +172,9 @@ var data = {
     ]
 };
 
-function crearCard(){
-    return `<div  class="card" style="width: 18rem;">
-    <img src="./assets/Food_Fair.jpg" class="card-img-top" alt="food"> 
-    <div class="card-body">
-       <h5  id="titulocard" class="card-title">title</h5>
-       <p class="card-text">description</p>
-       <div class="d-flex">
-          <p class="price"> price $00000</p>
-         <a href="#" class="btn btn-primary" id="btn">Ver mas</a>
-       </div>
-    </div>
-    </div>`
-}
-
-document.querySelector('section').innerHTML += crearCard();
-document.querySelector('section').innerHTML += crearCard();
-document.querySelector('section').innerHTML += crearCard();
-
-
 
 let dateRef = data.currentDate;
 let eventPast = [];
-
  data.events.forEach(element => {
     if (data.currentDate > element.date) {
     eventPast.push(element);
@@ -202,15 +182,51 @@ let eventPast = [];
      } 
   });
 
-let imagen = document.getElementsByClassName('card-img-top');
-let card = document.getElementsByClassName('card-title');
-let description = document.getElementsByClassName('card-text');
-let price = document.getElementsByClassName('price');
+  function crearCard(data) {
+    let clase = document.querySelector('section')
+    data.forEach(cards => {
+      let div = document.createElement('div')
+      div.innerHTML = `
+        <div  class="card" style="width: 18rem;">
+                  <img src="${cards.image}" class="card-img-top" alt="imagen">
+                  <div class="card-body">
+                      <h5  id="titulocard" class="card-title">${cards.name}</h5>
+                      <p class="card-text">${cards.description}</p>
+                      <div class="d-flex">
+                          <p class="price"> ${"$ " + cards.price}</p>
+                      <a href="./details.html?id=${cards._id}" class="btn btn-primary" id="btn">Ver mas</a>
+                      </div>
+                  </div>
+              </div>
+        `
+      clase.appendChild(div)
+    });
+  }
+  
+  crearCard(eventPast);
 
-  for (var i = 0; i < eventPast.length; i++) {
-    card[i].textContent = eventPast[i].name
-    description[i].textContent = eventPast[i].description
-    price[i].textContent = "$ " + eventPast[i].price
-    imagen[i].src = eventPast[i].image
+  let categories = [];
+
+data.events.forEach(element => {
+  if (!categories.includes(element.category)) {
+    categories.push(element.category);
+    element++;
+  }
+});
+
+let checkbox = document.getElementsByClassName('form-check-label');
+let valor = document.querySelectorAll('.form-check-input');
+
+for (var i = 0; i < categories.length; i++) {
+  checkbox[i].textContent = categories[i];
+}
+for (var i = 0; i < categories.length; i++) {
+  valor[i].value = categories[i];
+}
+
+let cards = document.querySelectorAll('.card');
+
+for (var i = 0; i < data.events.length; i++) {
+  cards[i].category = data.events[i].category
 }
 

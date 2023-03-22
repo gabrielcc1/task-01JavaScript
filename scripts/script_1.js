@@ -173,40 +173,91 @@ var data = {
 };
 
 
-function crearCard(){
-  return `<div  class="card" style="width: 18rem;">
-  <img src="./assets/Food_Fair.jpg" class="card-img-top" alt="food"> 
-  <div class="card-body">
-     <h5  id="titulocard" class="card-title">title</h5>
-     <p class="card-text">description</p>
-     <div class="d-flex">
-        <p class="price"> price $00000</p>
-       <a href="#" class="btn btn-primary" id="btn">Ver mas</a>
-     </div>
-  </div>
-  </div>`
+let cartas = [];
+
+for (var i = 0; i < data.events.length; i++) {
+  cartas.push(data.events[i]);
 }
 
-document.querySelector('section').innerHTML += crearCard();
-document.querySelector('section').innerHTML += crearCard();
-document.querySelector('section').innerHTML += crearCard();
-document.querySelector('section').innerHTML += crearCard();
-document.querySelector('section').innerHTML += crearCard();
-document.querySelector('section').innerHTML += crearCard();
-document.querySelector('section').innerHTML += crearCard();
-document.querySelector('section').innerHTML += crearCard();
-document.querySelector('section').innerHTML += crearCard();
-document.querySelector('section').innerHTML += crearCard();
-
-let imagen = document.getElementsByClassName('card-img-top'); 
-let card = document.getElementsByClassName('card-title');
-let description = document.getElementsByClassName('card-text');
-let price = document.getElementsByClassName('price');
-
-for (var i = 0; i <data.events.length; i++){
-  card[i].textContent = data.events[i].name
-  description[i].textContent = data.events[i].description
-  price[i].textContent = "$ " + data.events[i].price
-  imagen[i].src = data.events[i].image 
+function crearCard(data) {
+  let clase = document.querySelector('section')
+  data.forEach(cards => {
+    let div = document.createElement('div')
+    div.innerHTML = `
+      <div  class="card" style="width: 18rem;">
+                <img src="${cards.image}" class="card-img-top" alt="imagen">
+                <div class="card-body">
+                    <h5  id="titulocard" class="card-title">${cards.name}</h5>
+                    <p class="card-text">${cards.description}</p>
+                    <div class="d-flex">
+                        <p class="price"> ${"$ " + cards.price}</p>
+                    <a href="./details.html?id=${cards._id}" class="btn btn-primary" id="btn">Ver mas</a>
+                    </div>
+                </div>
+            </div>
+      `
+    clase.appendChild(div)
+  });
 }
 
+crearCard(cartas);
+
+
+
+
+
+let categories = [];
+
+data.events.forEach(element => {
+  if (!categories.includes(element.category)) {
+    categories.push(element.category);
+    element++;
+  }
+});
+
+let checkbox = document.getElementsByClassName('form-check-label');
+let valor = document.querySelectorAll('.form-check-input');
+
+for (var i = 0; i < categories.length; i++) {
+  checkbox[i].textContent = categories[i];
+}
+for (var i = 0; i < categories.length; i++) {
+  valor[i].value = categories[i];
+}
+
+let cards = document.querySelectorAll('.card');
+
+for (var i = 0; i < cartas.length; i++) {
+  cards[i].id = cartas[i]._id
+  cards[i].category = cartas[i].category
+}
+
+let clase = document.querySelector('section')
+valor.forEach(check => {
+  check.addEventListener('click', function () {
+    if (check.checked == true) {
+      cards.forEach(tarjetas => {
+        tarjetas.classList.add("non");
+
+        if (tarjetas.category == check.value) {
+          tarjetas.classList.remove("non");
+        }
+      }
+      )
+    }
+    else {
+      location.reload();
+    }
+
+  })
+});
+
+document.addEventListener('keyup', e => {
+  if (e.target.matches('#buscador')) {
+    cards.forEach(tarjetas => {
+      tarjetas.category.toLowerCase().includes(e.target.value)
+        ? tarjetas.classList.remove('non')
+        : tarjetas.classList.add('non')
+    })
+  } 
+})
